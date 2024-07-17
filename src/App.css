@@ -36,7 +36,7 @@
     border: none;
     cursor: pointer;
     background-color: transparent;
-    background-image: url(./images/chat.webp);
+    background-image: url('https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo/build/static/media/chat.webp');
     background-size: cover;
     outline: none;
     -webkit-filter: drop-shadow(0 0 13px rgba(91, 81, 81, 0.4));

@@ -4,7 +4,6 @@ import Chatbot, { createChatBotMessage } from "react-chatbot-kit";
 
 import 'react-chatbot-kit/build/main.css';
 import './App.css';
-import avatarImage from "./images/avatar.jpg";
 import uuid from "react-uuid";
 
 const ClientContext = React.createContext({
@@ -45,7 +44,9 @@ const MessageParser = ({children, actions}) => {
 
 class BotAvatar extends React.Component {
   render() {
-    return <div className="react-chatbot-kit-chat-bot-avatar-container"><img src={avatarImage} alt="Avatar"/></div>;
+    return <div className="react-chatbot-kit-chat-bot-avatar-container">
+      <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo/build/static/media/avatar.jpg" alt="Avatar"/>
+    </div>;
   }
 }
 
