@@ -1,0 +1,31 @@
+{
+  "name": "ai-chatbot-demo",
+  "version": "1.0.0",
+  "main": "build/static/js/main.js",
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-chatbot-kit": "^2.2.2",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "react-uuid": "^2.0.0"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
