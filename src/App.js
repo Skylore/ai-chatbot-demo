@@ -17,7 +17,7 @@ const MessageParser = ({children, actions}) => {
   const parse = async (message) => {
     sendButton.setAttribute('disabled', '')
 
-    const response = await fetch('https://api-19.ai-chatbot-demo.com/chat/message', {
+    const response = await fetch('https://api-wine.ai-chatbot-demo.com/chat/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
