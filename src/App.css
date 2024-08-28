@@ -56,11 +56,11 @@
 
 .react-chatbot-kit-chat-bot-message {
     background-color: var(--main-bg-color);
-    font-size: 0.85rem;
+    font-size: 0.85rem!important;
 }
 
 .react-chatbot-kit-user-chat-message {
-    font-size: 0.85rem;
+    font-size: 0.85rem!important;
 }
 
 .react-chatbot-kit-chat-bot-message-arrow {
@@ -77,7 +77,7 @@
 }
 
 .react-chatbot-kit-chat-input {
-    font-size: 0.8rem;
+    font-size: 0.8rem!important;
     border-radius: 0 0 0 5px;
     outline: none;
 }

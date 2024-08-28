@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="main.1a4e1c83" level="application" />
     <orderEntry type="library" name="main.67ee1bdb" level="application" />
+    <orderEntry type="library" name="main" level="application" />
   </component>
 </module>

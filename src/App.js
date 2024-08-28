@@ -100,7 +100,7 @@ function App() {
                         <Chatbot
                             config={{
                                 botName: 'manager',
-                                initialMessages: [createChatBotMessage('Напишите своё пожелание, а мы подберем для Вас лучший вариант 😉')],
+                                initialMessages: [createChatBotMessage('Гарного дня! Чим можемо долучитися до вашого ідеального смаку шампанського та вина? 😉')],
                                 customComponents: {
                                     botAvatar: (props) => <BotAvatar/>
                                 }
