@@ -105,13 +105,13 @@ function App() {
                                     botAvatar: (props) => <BotAvatar/>
                                 }
                             }}
-                            headerText='Чат с менеджером'
+                            headerText='Чат із сомельє '
                             placeholderText='Напишіть своє повідомлення'
                             messageParser={MessageParser}
                             actionProvider={ActionProvider}
                         />
                     </div>
-                    <button type="button" title={'Чат с менеджером'} className="app-chatbot-trigger"
+                    <button type="button" title={'Чат із сомельє '} className="app-chatbot-trigger"
                             onClick={this.handleTriggerClick}></button>
                 </div>
             );
