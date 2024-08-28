@@ -106,7 +106,7 @@ function App() {
                                 }
                             }}
                             headerText='Чат с менеджером'
-                            placeholderText='Напишите свое сообщение'
+                            placeholderText='Напишіть своє повідомлення'
                             messageParser={MessageParser}
                             actionProvider={ActionProvider}
                         />
