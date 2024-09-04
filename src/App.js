@@ -17,7 +17,7 @@ const MessageParser = ({children, actions}) => {
   const parse = async (message) => {
     sendButton.setAttribute('disabled', '')
 
-    const response = await fetch('https://api-19.ai-chatbot-demo.com/chat/message', {
+    const response = await fetch('https://api-industrial-machines.ai-chatbot-demo.com/chat/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ const MessageParser = ({children, actions}) => {
 class BotAvatar extends React.Component {
   render() {
     return <div className="react-chatbot-kit-chat-bot-avatar-container">
-      <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo/build/static/media/avatar.jpg" alt="Avatar"/>
+      <img src="https://assets.minimals.cc/public/assets/images/mock/avatar/avatar-18.webp" alt="Avatar"/>
     </div>;
   }
 }
@@ -100,18 +100,18 @@ function App() {
                         <Chatbot
                             config={{
                                 botName: 'manager',
-                                initialMessages: [createChatBotMessage('Напишите своё пожелание, а мы подберем для Вас лучший вариант 😉')],
+                                initialMessages: [createChatBotMessage('Write your wish, and we will select the best option for you')],
                                 customComponents: {
                                     botAvatar: (props) => <BotAvatar/>
                                 }
                             }}
-                            headerText='Чат с менеджером'
-                            placeholderText='Напишите свое сообщение'
+                            headerText='Chat with manager'
+                            placeholderText='Write your message'
                             messageParser={MessageParser}
                             actionProvider={ActionProvider}
                         />
                     </div>
-                    <button type="button" title={'Чат с менеджером'} className="app-chatbot-trigger"
+                    <button type="button" title={'Chat with manager'} className="app-chatbot-trigger"
                             onClick={this.handleTriggerClick}></button>
                 </div>
             );

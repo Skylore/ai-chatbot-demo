@@ -1,8 +1,12 @@
 :root {
-    --main-bg-color: #008649;
-    --gray-bg-color: #888888;
-    --avatar-bg-color: #505050;
+    --main-bg-color: #C3983C;
+    --gray-bg-color: #5B5B5B;
+    --avatar-bg-color: #C3983C;
     --font-family: 'Noto Sans', Arial, sans-serif;
+}
+
+.ai-chatbot {
+    position: absolute!important;
 }
 
 .app-chatbot-container {
@@ -36,7 +40,8 @@
     border: none;
     cursor: pointer;
     background-color: transparent;
-    background-image: url('https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo/build/static/media/chat.webp');
+    /*background-image: url('https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo/build/static/media/chat.webp');*/
+    background-image: url('images/chat.webp');
     background-size: cover;
     outline: none;
     -webkit-filter: drop-shadow(0 0 13px rgba(91, 81, 81, 0.4));
