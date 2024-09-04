@@ -36,7 +36,7 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+lib/Release
 
 # Dependency directories
 node_modules/
@@ -83,21 +83,21 @@ web_modules/
 .cache
 .parcel-cache
 
-# Next.js build output
+# Next.js lib output
 .next
 out
 
-# Nuxt.js build / generate output
+# Nuxt.js lib / generate output
 .nuxt
 dist
 
 # Gatsby files
 .cache/
-# Comment in the public1 line in if your project uses Gatsby and not Next.js
+# Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
-# public1
+# public
 
-# vuepress build output
+# vuepress lib output
 .vuepress/dist
 
 # vuepress v2.x temp and cache directory
