@@ -83,7 +83,7 @@ function App() {
 
         constructor(props) {
             super(props);
-            this.state = {showChat: true};
+            this.state = {showChat: false};
             this.handleTriggerClick = this.handleTriggerClick.bind(this);
         }
 
