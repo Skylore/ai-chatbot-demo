@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Chatbot, { createChatBotMessage } from "react-chatbot-kit";
+import Chatbot, {createChatBotMessage, createCustomMessage} from "react-chatbot-kit";
 
 import 'react-chatbot-kit/build/main.css';
 import './App.css';
@@ -50,11 +50,13 @@ class BotAvatar extends React.Component {
   }
 }
 
-const ActionProvider = ({createChatBotMessage, setState, children}) => {
+const ActionProvider = ({setState, children}) => {
   const sendButton = document.getElementsByClassName('react-chatbot-kit-chat-btn-send')[0];
 
   const setMessage = (message) => {
-    const botMessage = createChatBotMessage(message);
+    const botMessage = createCustomMessage("", 'custom', {
+      payload: message
+    })
     sendButton.removeAttribute('disabled')
 
     setState((prev) => ({
@@ -77,6 +79,34 @@ const ActionProvider = ({createChatBotMessage, setState, children}) => {
   );
 };
 
+function CustomMessage(message) {
+  localStorage.setItem('chat_messages', JSON.stringify(message.state?.messages));
+
+  const replaceMarkdownLinks = (text) => {
+    // Regular expression to match [link name](link) format
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    // Replace with <a href="link">link name</a>
+    return text.replace(regex, '<a href="$2" target="_blank">$1</a>');
+  };
+
+  const createMarkup = (text) => {
+    // Replace markdown links with HTML links
+    const parsedText = replaceMarkdownLinks(text);
+    return { __html: parsedText };
+  };
+
+  return (
+    <div className="react-chatbot-kit-chat-bot-message-container">
+      <div className="react-chatbot-kit-chat-bot-avatar-container">
+        <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo/build/static/media/avatar.jpg" alt="Alt"/>
+      </div>
+      <div className="react-chatbot-kit-chat-bot-message">
+        <span dangerouslySetInnerHTML={createMarkup(message.payload)}></span>
+      </div>
+    </div>
+  );
+}
+
 function App() {
     class ChatWrapper extends React.Component {
         static contextType = ClientContext;
@@ -93,6 +123,10 @@ function App() {
             }));
         }
 
+        loadMessages() {
+          return JSON.parse(localStorage.getItem('chat_messages'));
+        };
+
         render() {
             return (
                 <div className="App">
@@ -103,12 +137,16 @@ function App() {
                                 initialMessages: [createChatBotMessage('Гарного дня! Чим можемо долучитися до вашого ідеального смаку шампанського та вина? 😉')],
                                 customComponents: {
                                     botAvatar: (props) => <BotAvatar/>
-                                }
+                                },
+                              customMessages: {
+                                custom: (props) => <CustomMessage {...props} />,
+                              },
                             }}
                             headerText='Чат із сомельє '
                             placeholderText='Напишіть своє повідомлення'
                             messageParser={MessageParser}
                             actionProvider={ActionProvider}
+                            messageHistory={this.loadMessages()}
                         />
                     </div>
                     <button type="button" title={'Чат із сомельє '} className="app-chatbot-trigger"

@@ -1,8 +1,18 @@
 :root {
-    --main-bg-color: #008649;
+    --main-bg-color: #2E82FF;
     --gray-bg-color: #888888;
     --avatar-bg-color: #505050;
     --font-family: 'Noto Sans', Arial, sans-serif;
+}
+
+a {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFA500;
+    text-decoration: underline;
 }
 
 .app-chatbot-container {
