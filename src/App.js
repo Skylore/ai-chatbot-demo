@@ -134,7 +134,7 @@ function App() {
                         <Chatbot
                             config={{
                                 botName: 'manager',
-                                initialMessages: [createChatBotMessage('Гарного дня! Чим можемо долучитися до вашого ідеального смаку шампанського та вина? 😉')],
+                                initialMessages: [createChatBotMessage('Hey! How can we join your ideal taste of champagne and wine? 😉 😉')],
                                 customComponents: {
                                     botAvatar: (props) => <BotAvatar/>
                                 },
@@ -142,14 +142,14 @@ function App() {
                                 custom: (props) => <CustomMessage {...props} />,
                               },
                             }}
-                            headerText='Чат із сомельє '
-                            placeholderText='Напишіть своє повідомлення'
+                            headerText='Chat with sommelier '
+                            placeholderText='Write your message'
                             messageParser={MessageParser}
                             actionProvider={ActionProvider}
                             messageHistory={this.loadMessages()}
                         />
                     </div>
-                    <button type="button" title={'Чат із сомельє '} className="app-chatbot-trigger"
+                    <button type="button" title={'Chat with sommelier '} className="app-chatbot-trigger"
                             onClick={this.handleTriggerClick}></button>
                 </div>
             );
