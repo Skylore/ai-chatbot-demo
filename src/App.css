@@ -1,17 +1,17 @@
 :root {
-    --main-bg-color: #2E82FF;
+    --main-bg-color: #D93C82;
     --gray-bg-color: #888888;
-    --avatar-bg-color: #505050;
+    --avatar-bg-color: #D93C82;
     --font-family: 'Noto Sans', Arial, sans-serif;
 }
 
 a {
-    color: #FFA500;
-    text-decoration: none;
+    color: #f7f7b2;
+    text-decoration: #f7f7b2;
 }
 
 a:hover {
-    color: #FFA500;
+    color: #f7f7b2;
     text-decoration: underline;
 }
 
@@ -46,7 +46,7 @@ a:hover {
     border: none;
     cursor: pointer;
     background-color: transparent;
-    background-image: url('https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo@1.2.1-wine/build/static/media/chat.webp');
+    background-image: url('https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo@1.0.1-flowers/build/static/media/chat.webp');
     background-size: cover;
     outline: none;
     -webkit-filter: drop-shadow(0 0 13px rgba(91, 81, 81, 0.4));

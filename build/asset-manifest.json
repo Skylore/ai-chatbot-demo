@@ -2,6 +2,7 @@
   "files": {
     "main.css": "/static/css/main.css",
     "main.js": "/static/js/main.js",
+    "static/media/chat.webp": "/static/media/chat.webp",
     "index.html": "/index.html",
     "main.css.map": "/static/css/main.css.map",
     "main.js.map": "/static/js/main.js.map"

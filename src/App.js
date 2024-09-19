@@ -17,7 +17,7 @@ const MessageParser = ({children, actions}) => {
   const parse = async (message) => {
     sendButton.setAttribute('disabled', '')
 
-    const response = await fetch('https://api-wine.ai-chatbot-demo.com/chat/message', {
+    const response = await fetch('https://api-flowers.ai-chatbot-demo.com/chat/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -142,7 +142,7 @@ function App() {
                                 custom: (props) => <CustomMessage {...props} />,
                               },
                             }}
-                            headerText='Chat with sommelier '
+                            headerText='Chat with florist '
                             placeholderText='Write your message'
                             messageParser={MessageParser}
                             actionProvider={ActionProvider}
