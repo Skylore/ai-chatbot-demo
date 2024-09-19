@@ -134,7 +134,9 @@ function App() {
                         <Chatbot
                             config={{
                                 botName: 'manager',
-                                initialMessages: [createChatBotMessage('Hey! How can we join your ideal taste of champagne and wine? 😉 😉')],
+                                initialMessages: [createChatBotMessage('🌺 Flowers Speak Louder Than Words! 🌺\n' +
+                                  '\n' +
+                                  'Welcome to a place where emotions blossom. 💐 We turn your feelings into vibrant arrangements. What would you like to share with the world today? Let\'s create a floral miracle together! 🌟')],
                                 customComponents: {
                                     botAvatar: (props) => <BotAvatar/>
                                 },
