@@ -45,7 +45,7 @@ const MessageParser = ({children, actions}) => {
 class BotAvatar extends React.Component {
   render() {
     return <div className="react-chatbot-kit-chat-bot-avatar-container">
-      <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo@1.0.2-flowers/build/static/tmp-photo.jpeg" alt="Avatar"/>
+      <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo@1.0.3-flowers/build/static/assistant-img.jpeg" alt="Avatar"/>
     </div>;
   }
 }
@@ -98,7 +98,7 @@ function CustomMessage(message) {
   return (
     <div className="react-chatbot-kit-chat-bot-message-container">
       <div className="react-chatbot-kit-chat-bot-avatar-container">
-        <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo@1.0.2-flowers/build/static/tmp-photo.jpeg" alt="Alt"/>
+        <img src="https://cdn.jsdelivr.net/gh/Skylore/ai-chatbot-demo@1.0.3-flowers/build/static/assistant-img.jpeg" alt="Alt"/>
       </div>
       <div className="react-chatbot-kit-chat-bot-message">
         <span dangerouslySetInnerHTML={createMarkup(message.payload)}></span>
