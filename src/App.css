@@ -84,6 +84,7 @@ a:hover {
 .react-chatbot-kit-chat-header,
 .react-chatbot-kit-chat-input {
     font-family: var(--font-family);
+    font-size: 12px;
 }
 
 .react-chatbot-kit-chat-input {
